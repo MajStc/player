@@ -1,0 +1,26 @@
+.loginPageContainer{
+    display: flex;
+    flex-direction: column;
+    height: 70vh;
+    margin-top: 10vh;
+    background-color: aqua;
+    padding: 2em;
+    gap: 2em;
+}
+
+.inputContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.inputContainer > input[type="text"]{
+    border: none;
+    outline: none;
+    padding: 0.4em;
+}
+
+.loginButton {
+    border:none;
+    outline: none;
+}
