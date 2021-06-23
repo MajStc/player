@@ -1,4 +1,4 @@
-# RestaurantsAPI by BraveSquirrels
+# BSG
 
 
 
