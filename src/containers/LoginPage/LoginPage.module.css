@@ -1,26 +1,71 @@
-.loginPageContainer{
-    display: flex;
-    flex-direction: column;
-    height: 70vh;
-    margin-top: 10vh;
-    background-color: aqua;
-    padding: 2em;
-    gap: 2em;
+.loginPageContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 550px;
+  margin-top: 5vh;
+  background-color: var(--cardBackground);
+  border: 1px solid var(--borderColor);
+  box-shadow: 0 20px 24px var(--shadowColor);
+  padding: 2em;
+  gap: 3em;
+  width: 20vw;
+  /* min-width: 300px; */
+  width: clamp(300px, 50vw, 500px);
+  /* max-width: 500px; */
+  color: white;
 }
 
-.inputContainer{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
 }
 
-.inputContainer > input[type="text"]{
-    border: none;
-    outline: none;
-    padding: 0.4em;
+.inputContainer > input[type="text"] {
+  border: 1px solid rgb(19, 19, 19);
+  border-radius: 3px;
+  outline: none;
+  padding: 0.4em;
+  height: 40px;
+  background-color: rgba(223, 226, 172, 0.705);
+}
+
+.inputContainer > input[type="text"]::placeholder {
+  color: black;
 }
 
 .loginButton {
-    border:none;
-    outline: none;
+  border: none;
+  outline: none;
+  padding: 0.5em;
+  background-color: rgb(222, 155, 135);
+  border: 1px solid rgb(182, 77, 51);
+  border-radius: 4px;
+  height: 40px;
+}
+
+.loginButton:hover {
+  cursor: pointer;
+}
+
+.logo {
+  justify-self: flex-start;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+.logo > p {
+  margin: 0;
+  padding: 0;
+}
+
+@media (max-width: 320px) {
+  .loginPageContainer {
+    margin: 0;
+  }
 }

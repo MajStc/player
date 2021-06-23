@@ -7,16 +7,13 @@ const userLogin = createSlice({
   initialState,
   reducers: {
     setUserData: (state, { payload }) => {
-      console.log(payload);
-      console.log(state.User);
-      state = payload;
-    },
-    clearUserData: (state) => {
-      state = initialState;
+      state.AuthorizationToken = payload.AuthorizationToken;
+      state.User = payload.User;
+      localStorage.setItem("token", payload.AuthorizationToken.Token);
     },
   },
 });
 
 export default userLogin.reducer;
 
-export const { setUserData, clearUserData } = userLogin.actions;
+export const { setUserData } = userLogin.actions;

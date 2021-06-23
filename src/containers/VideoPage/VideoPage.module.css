@@ -1,0 +1,13 @@
+.videoContainer {
+  margin-top: 10vh;
+  width: 80vw;
+  height: 40vh;
+}
+
+@media (max-width: 450px) {
+  .videoContainer {
+    margin-top: 40vh;
+    width: 100vw;
+    height: 60vh;
+  }
+}

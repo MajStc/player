@@ -1,0 +1,35 @@
+.movieContainer {
+  display: flex;
+  flex-direction: column;
+  width: 220px;
+  max-height: 300px;
+  overflow-y: auto;
+  align-items: center;
+  border: 1px solid var(--borderColor);
+  border-radius: 4px;
+  box-shadow: 0 12px 15px var(--shadowColor);
+  padding: 0 1em 1em;
+  background-color: var(--cardBackground);
+  color: white;
+  overflow-x: hidden;
+}
+
+.movieContainer > img {
+  max-width: 110%;
+  max-height: 110%;
+  border-radius: 2px;
+  transition: 0.2s;
+}
+
+.movieContainer > img:hover {
+  transform: scale(1.05);
+}
+
+.movieContainer:hover {
+  cursor: pointer;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 1.2em;
+}

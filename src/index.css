@@ -1,17 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=B612:wght@400;700&display=swap");
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: rgb(43, 43, 43);
+}
+
+:root {
+  --cardBackground: rgba(255, 255, 255, 0.123);
+  --borderColor: rgb(82, 31, 31);
+  --shadowColor: rgba(61, 13, 13, 0.425);
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "B612", sans-serif;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+  border-radius: 2px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #312f2f;
+  border-radius: 2px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  border-radius: 2px;
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }

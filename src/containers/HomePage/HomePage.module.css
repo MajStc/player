@@ -1,0 +1,15 @@
+.mainContainer {
+  box-sizing: border-box;
+  margin-top: 5vh;
+  width: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: space-around;
+  row-gap: 40px;
+  column-gap: 40px;
+}
+
+.mainContainer > div:last-child {
+  margin-bottom: 5vh;
+}

@@ -3,13 +3,18 @@ import { useCallback } from "react";
 import { useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
 import agent from "../../agent/agent";
+import LoadingSpinner from "../../components/shared/LoadingSpinner/LoadingSpinner";
 import { setUserData } from "../../store/user/userSlice";
 import { defaultLoginData } from "../../utils/Defaults/userData";
+import { HOME } from "../../utils/routes";
+
+import bsg from "../../assets/images/bsg.png";
 
 import styles from "./LoginPage.module.css";
 
 const LoginPage = () => {
   const [loginData, setLoginData] = useState(defaultLoginData);
+  const [loading, setLoading] = useState(false);
   const history = useHistory();
   const dispatch = useDispatch();
 
@@ -25,16 +30,21 @@ const LoginPage = () => {
 
   const handleLogin = (event: React.MouseEvent<HTMLElement>) => {
     event.preventDefault();
+    setLoading(true);
     agent.Auth.login(loginData)
       .then((res) => {
         dispatch(setUserData(res.data));
-        history.push("/home");
+        setLoading(false);
+        history.push(HOME);
       })
-      .catch((err) => console.error(err));
+      .catch(console.error);
   };
 
   return (
     <div className={styles.loginPageContainer}>
+      <p className={styles.logo}>
+        <img alt="bsg" src={bsg} />
+      </p>
       <label className={styles.inputContainer}>
         <span>Username:</span>
         <input
@@ -57,7 +67,7 @@ const LoginPage = () => {
       </label>
 
       <button className={styles.loginButton} onClick={handleLogin}>
-        LogIn
+        {loading ? <LoadingSpinner /> : "LogIn"}
       </button>
     </div>
   );
