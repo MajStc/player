@@ -40,5 +40,4 @@ To run iOS or Android version
 <br></br>
 Now whether you would like to run android or ios, select your platfrom and do the following:
 <br></br>
-* ***npx cap add android/ios***
 * ***npx cap run adroid/ios*** 
